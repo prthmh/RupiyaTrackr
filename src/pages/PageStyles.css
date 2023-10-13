@@ -1,0 +1,44 @@
+.page_header {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+.add_item {
+  padding: 0.2rem;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  transition: 0.2s ease-in;
+  background-color: var(--light_color1);
+  color: var(--dark_color1);
+  font-size: 1.1rem;
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  border: 2px solid var(--dark_color1);
+  font-weight: 600;
+  transition: 0.3s ease-in;
+}
+.add_icon {
+  font-size: 1.2rem;
+}
+#text {
+  padding-bottom: 0.3rem;
+}
+
+.add_item:hover {
+  cursor: pointer;
+  background-color: var(--dark_color1);
+  color: var(--light_color);
+  border: 2px solid var(--light_color1);
+}

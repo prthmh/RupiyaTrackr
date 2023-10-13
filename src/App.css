@@ -1,0 +1,16 @@
+:root {
+  --dark_color1: #1c1c1c;
+  /* --dark_color1: #110b11; */
+  --light_color1: #fcf5c7;
+  --light_color2: #adf7b6;
+}
+
+body {
+  background-color: var(--dark_color1);
+  color: var(--light_color1);
+  margin: 0;
+}
+
+.pages {
+  margin: 0 10rem;
+}

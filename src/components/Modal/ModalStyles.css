@@ -1,0 +1,74 @@
+.income_modal {
+  padding: 1rem;
+  border-radius: 0.9rem;
+  color: var(--dark_color1);
+  width: 20rem;
+}
+
+.income_modal > h3 {
+  margin: 0;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--dark_color1);
+}
+
+.modal_form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-top: 0.4rem;
+}
+
+.form_label {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.from_input {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0rem 0.5rem;
+  /* width: 90%; */
+  border: none;
+  border-radius: 0.5rem;
+  height: 1.9rem;
+  box-shadow: 0px 5px 10px 12px rgba(0, 0, 0, 0.1);
+}
+
+.modal_action_btns {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.save_btn,
+.cancel_btn {
+  border: none;
+  font-family: inherit;
+  color: var(--light_color1);
+  border-radius: 0.4rem;
+  padding: 0.4rem;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: 0.1s ease-in;
+}
+
+.save_btn {
+  background-color: var(--dark_color1);
+  border: 3px solid var(--dark_color1);
+}
+
+.cancel_btn {
+  background-color: red;
+  border: 3px solid red;
+}
+
+.save_btn:hover {
+  cursor: pointer;
+  color: var(--dark_color1);
+  background-color: transparent;
+}
+
+.cancel_btn:hover {
+  cursor: pointer;
+  color: red;
+  background-color: transparent;
+}

@@ -1,0 +1,3 @@
+export const FETCH_INCOME = "FETCH_INCOME";
+export const ADD_INCOME = "ADD_INCOME";
+export const INCOME_ACTION_FAILURE = "INCOME_ACTION_FAILURE";
