@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
+  margin: 0 5rem;
 }
 
 .item {
@@ -9,7 +10,7 @@
   flex-direction: column;
   padding: 0.8rem;
   border-radius: 0.6rem;
-  box-shadow: -4px 3px 29px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: -4px 3px 29px 15px rgba(0, 0, 0, 0.4);
   color: var(--dark_color1);
   gap: 0.5rem;
   font-weight: 500;

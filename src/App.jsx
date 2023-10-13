@@ -9,18 +9,20 @@ import Home from "./pages/Home/Home";
 import Income from "./pages/Income";
 import Expense from "./pages/Expense";
 import Saving from "./pages/Saving";
-import { fetchIncome } from "./redux/action";
+import { fetchExpense, fetchIncome, fetchSaving } from "./redux/action";
 
 function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchIncome());
+    dispatch(fetchExpense());
+    dispatch(fetchSaving());
   }, [dispatch]);
 
   return (
     <div>
-       <Toaster
+      <Toaster
         position="top-center"
         toastOptions={{
           className: "",
