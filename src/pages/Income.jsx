@@ -6,6 +6,7 @@ import NewEntryModal from "../components/Modal/NewEntryModal";
 import ItemList from "../components/ItemList/ItemList";
 import FilterBar from "../components/FilterBar/FilterBar";
 import getFilteredItems from "../utils/getFilteredItems";
+import Loader from "../components/Loader/Loader";
 
 const Income = () => {
   const [showModal, setShowModal] = useState(false);
@@ -34,7 +35,13 @@ const Income = () => {
         setFilters={setFilters}
         itemsAry={allIncomes}
       />
-      <ItemList itemsAry={filteredIncome} cardColor="#adf7b6" />
+      {allIncomes.length === 0 ? (
+        <div className="load">
+          <Loader />
+        </div>
+      ) : (
+        <ItemList itemsAry={filteredIncome} cardColor="#adf7b6" />
+      )}
       {showModal && (
         <div className="modal" onClick={() => setShowModal(false)}>
           <NewEntryModal

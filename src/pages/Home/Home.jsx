@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Home.css";
 
 const Home = () => {
@@ -19,6 +20,36 @@ const Home = () => {
         financial adventure, this app will guide you to a brighter financial
         future. Start today and embark on a path towards financial well-being!
       </p>
+      <div className="links">
+        <Link
+          to="/income"
+          className="link_element"
+          style={{ backgroundColor: "var(--light_color2)" }}
+        >
+          Go to Incomes
+        </Link>
+        <Link
+          to="/expense"
+          className="link_element"
+          style={{ backgroundColor: "var(--light_color5)" }}
+        >
+          Go to Expenses
+        </Link>
+        <Link
+          to="/saving"
+          className="link_element"
+          style={{ backgroundColor: "var(--light_color6)" }}
+        >
+          Go to Savings
+        </Link>
+        <Link
+          to="/report"
+          className="link_element"
+          style={{ backgroundColor: "var(--report_color1)" }}
+        >
+          Generate Report
+        </Link>
+      </div>
     </div>
   );
 };

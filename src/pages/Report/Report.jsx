@@ -18,11 +18,9 @@ const Report = () => {
         </select>
       </div>
       <div className="report">
-        {reportType === "income Vs expense" ? (
-          <IncVExpReport />
-        ) : (
-          <ExpBreakdown />
-        )}
+        {reportType === "income Vs expense" && <IncVExpReport />}
+        {reportType === "expense breakdown" && <ExpBreakdown />}
+        {reportType === "" && <h2>Select a Report Type</h2>}
       </div>
     </div>
   );
