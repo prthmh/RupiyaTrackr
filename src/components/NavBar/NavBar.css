@@ -12,7 +12,8 @@
   .operation_pages {
     display: flex;
     justify-content: space-between;
-    gap: 6rem;
+    align-items: center;
+    gap: 4rem;
   }
   
   .nav_element {
@@ -33,3 +34,9 @@
     cursor: pointer;
   }
   
+  .github_link{
+    text-decoration: none;
+    color: var(--dark_color1);
+    font-size: 1.8rem;
+    margin-right: 1rem;
+  }
