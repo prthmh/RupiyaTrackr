@@ -19,6 +19,11 @@ const Income = () => {
 
   const filteredIncome = getFilteredItems(allIncomes, filters);
 
+  const totalIncome = allIncomes.reduce(
+    (total, income) => total + income.amount,
+    0
+  );
+
   return (
     <div>
       <div className="page_header">
@@ -30,6 +35,7 @@ const Income = () => {
           <span id="text">Add Income</span>
         </div>
       </div>
+      <h3>Total Income: ₹{totalIncome}</h3>
       <FilterBar
         filters={filters}
         setFilters={setFilters}

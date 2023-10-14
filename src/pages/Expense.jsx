@@ -20,6 +20,11 @@ const Expense = () => {
 
   const filteredExpenses = getFilteredItems(allExpenses, filters);
 
+  const totalExpense = allExpenses.reduce(
+    (total, expense) => total + expense.amount,
+    0
+  );
+
   return (
     <div>
       <div className="page_header">
@@ -31,6 +36,7 @@ const Expense = () => {
           <span id="text">Add Expense</span>
         </div>
       </div>
+      <h3>Total Expense: ₹{totalExpense}</h3>
       <FilterBar
         filters={filters}
         setFilters={setFilters}

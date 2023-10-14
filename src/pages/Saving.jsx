@@ -20,6 +20,11 @@ const Saving = () => {
 
   const filteredSaving = getFilteredItems(allSavings, filters);
 
+  const totalSaving = allSavings.reduce(
+    (total, saving) => total + saving.amount,
+    0
+  );
+
   return (
     <div>
       <div className="page_header">
@@ -31,6 +36,7 @@ const Saving = () => {
           <span id="text">Add Saving</span>
         </div>
       </div>
+      <h3>Total Saving: ₹{totalSaving}</h3>
       <FilterBar
         filters={filters}
         setFilters={setFilters}
