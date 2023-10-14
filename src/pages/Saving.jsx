@@ -20,7 +20,6 @@ const Saving = () => {
 
   const filteredSaving = getFilteredItems(allSavings, filters);
 
-  console.log("saving", allSavings);
   return (
     <div>
       <div className="page_header">

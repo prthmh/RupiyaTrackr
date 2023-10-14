@@ -16,7 +16,7 @@ const Home = () => {
         Management App is your trusted companion on this journey. Our
         user-friendly interface empowers you to effortlessly track your income,
         expenses, and savings, enabling you to make informed financial
-        decisions. Whether you're a seasoned pro or just starting on your
+        decisions. Whether you are a seasoned pro or just starting on your
         financial adventure, this app will guide you to a brighter financial
         future. Start today and embark on a path towards financial well-being!
       </p>

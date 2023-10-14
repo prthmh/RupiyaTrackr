@@ -2,6 +2,7 @@ import {
   ADD_EXPENSE,
   ADD_INCOME,
   ADD_SAVING,
+  EXPENSE_ACTION_FAILURE,
   FETCH_EXPENSE,
   FETCH_INCOME,
   FETCH_SAVING,
@@ -30,7 +31,7 @@ export const financeReducer = (state = initialState, { type, payload }) => {
       return { ...state, allExpenses: payload };
     case ADD_EXPENSE:
       return { ...state, allExpenses: [...state.allExpenses, payload] };
-    case INCOME_ACTION_FAILURE:
+    case EXPENSE_ACTION_FAILURE:
       return { ...state, expenseError: payload };
     case FETCH_SAVING:
       return { ...state, allSavings: payload };
