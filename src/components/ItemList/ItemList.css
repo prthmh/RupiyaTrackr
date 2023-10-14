@@ -8,6 +8,7 @@
 .item {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   padding: 0.8rem;
   border-radius: 0.6rem;
   box-shadow: -4px 3px 29px 15px rgba(0, 0, 0, 0.4);

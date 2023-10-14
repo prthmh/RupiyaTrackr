@@ -20,6 +20,9 @@ const NavBar = () => {
         <NavLink to="/saving" className="nav_element" style={gettActiveStyles}>
           Saving
         </NavLink>
+        <NavLink to="/report" className="nav_element" style={gettActiveStyles}>
+          Report
+        </NavLink>
       </div>
     </div>
   );

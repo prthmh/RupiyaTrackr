@@ -3,7 +3,7 @@ import toast from "react-hot-toast";
 import { useDispatch } from "react-redux";
 
 import "./ModalStyles.css";
-import { addIncome } from "../../redux/action";
+import { addExpense, addIncome, addSaving } from "../../redux/action";
 
 const initialState = {
   description: "",
@@ -34,6 +34,12 @@ const NewEntryModal = ({ setShowModal, entryType, modalColor }) => {
       switch (entryType) {
         case "Income":
           dispatch(addIncome(itemData));
+          break;
+        case "Expense":
+          dispatch(addExpense(itemData));
+          break;
+        case "Saving":
+          dispatch(addSaving(itemData));
           break;
         default:
           toast.error("No valid entry type");

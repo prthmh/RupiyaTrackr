@@ -4,12 +4,19 @@ import "./PageStyles.css";
 import { useState } from "react";
 import NewEntryModal from "../components/Modal/NewEntryModal";
 import ItemList from "../components/ItemList/ItemList";
+import FilterBar from "../components/FilterBar/FilterBar";
+import getFilteredItems from "../utils/getFilteredItems";
 
 const Income = () => {
   const [showModal, setShowModal] = useState(false);
+  const [filters, setFilters] = useState({
+    sort: null,
+    category: "",
+    reset: false,
+  });
   const allIncomes = useSelector((state) => state.allIncomes);
 
-  console.log("income", allIncomes);
+  const filteredIncome = getFilteredItems(allIncomes, filters);
 
   return (
     <div>
@@ -22,7 +29,12 @@ const Income = () => {
           <span id="text">Add Income</span>
         </div>
       </div>
-      <ItemList itemsAry={allIncomes} cardColor="#adf7b6" />
+      <FilterBar
+        filters={filters}
+        setFilters={setFilters}
+        itemsAry={allIncomes}
+      />
+      <ItemList itemsAry={filteredIncome} cardColor="#adf7b6" />
       {showModal && (
         <div className="modal" onClick={() => setShowModal(false)}>
           <NewEntryModal

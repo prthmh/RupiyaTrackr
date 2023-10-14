@@ -4,10 +4,20 @@ import { useState } from "react";
 
 import "./PageStyles.css";
 import NewEntryModal from "../components/Modal/NewEntryModal";
+import ItemList from "../components/ItemList/ItemList";
+import FilterBar from "../components/FilterBar/FilterBar";
+import getFilteredItems from "../utils/getFilteredItems";
 
 const Saving = () => {
   const [showModal, setShowModal] = useState(false);
+  const [filters, setFilters] = useState({
+    sort: null,
+    category: "",
+    reset: false,
+  });
   const allSavings = useSelector((state) => state.allSavings);
+
+  const filteredSaving = getFilteredItems(allSavings, filters);
 
   console.log("saving", allSavings);
   return (
@@ -21,6 +31,12 @@ const Saving = () => {
           <span id="text">Add Saving</span>
         </div>
       </div>
+      <FilterBar
+        filters={filters}
+        setFilters={setFilters}
+        itemsAry={allSavings}
+      />
+      <ItemList itemsAry={filteredSaving} cardColor="#79addc" />
       {showModal && (
         <div className="modal" onClick={() => setShowModal(false)}>
           <NewEntryModal

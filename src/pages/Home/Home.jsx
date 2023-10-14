@@ -3,7 +3,9 @@ import "./Home.css";
 const Home = () => {
   return (
     <div>
-      <h1>RupiyaTrackr</h1>
+      <header>
+        <div className="typewriter">RupiyaTrackr</div>
+      </header>
       <h3>
         Welcome to RupiyaTrackr a Finance Management App: Your Path to Financial
         Wellness!

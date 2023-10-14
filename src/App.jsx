@@ -10,6 +10,7 @@ import Income from "./pages/Income";
 import Expense from "./pages/Expense";
 import Saving from "./pages/Saving";
 import { fetchExpense, fetchIncome, fetchSaving } from "./redux/action";
+import Report from "./pages/Report/Report";
 
 function App() {
   const dispatch = useDispatch();
@@ -39,6 +40,7 @@ function App() {
           <Route path="/income" element={<Income />} />
           <Route path="/expense" element={<Expense />} />
           <Route path="/saving" element={<Saving />} />
+          <Route path="/report" element={<Report />} />
         </Routes>
       </div>
     </div>

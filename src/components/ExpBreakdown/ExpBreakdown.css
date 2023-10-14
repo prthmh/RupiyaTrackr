@@ -1,0 +1,27 @@
+.exp_break {
+  background-color: var(--light_color4);
+  color: var(--dark_color1);
+  padding: 1rem;
+  border-radius: 0.6rem;
+  box-shadow: -4px 13px 25px 15px rgba(0, 0, 0, 0.5);
+  font-size: 1.1rem;
+}
+
+.exp_table {
+  border: 2px solid var(--dark_color1);
+  border-radius: 1rem;
+  border-spacing: 0;
+}
+
+th {
+  text-align: left;
+}
+
+th,
+td {
+  padding: 0.8rem;
+}
+
+th {
+  border-bottom: 2px solid var(--dark_color1);
+}

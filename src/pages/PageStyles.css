@@ -3,6 +3,9 @@
   align-items: center;
   gap: 3rem;
 }
+.page_header > h2{
+  margin: 0;
+}
 
 .modal {
   display: flex;

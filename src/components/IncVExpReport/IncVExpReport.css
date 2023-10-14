@@ -1,0 +1,14 @@
+.inc_exp {
+  background-color: var(--report_color1);
+  color: var(--dark_color1);
+  padding: 1.4rem;
+  border-radius: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  box-shadow: -4px 13px 25px 15px rgba(0, 0, 0, 0.5);
+}
+
+.inc_exp > h2 {
+  margin: 0;
+}

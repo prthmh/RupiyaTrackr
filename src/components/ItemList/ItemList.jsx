@@ -19,7 +19,7 @@ const ItemList = ({ itemsAry, cardColor }) => {
           <h2>{item?.description}</h2>
           <div>
             <b>Amount: </b>
-            {item?.amount}
+            ₹{item?.amount}
           </div>
           <div>
             <b>Category: </b>
