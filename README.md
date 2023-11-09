@@ -15,7 +15,7 @@ The RupiyaTrackr is designed to help users manage their income, expenses, and sa
 - Node Js
 - Express Js
 - Mongoose
-### Features
+## Features
 #### Income Management
 - **Track Income**: Easily log your income transactions, including descriptions and amounts.
 - **Income Overview**: Access a comprehensive list of your income transactions with sorting and filtering options.
