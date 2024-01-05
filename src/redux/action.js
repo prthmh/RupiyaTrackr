@@ -1,7 +1,7 @@
 import { ADD_EXPENSE, ADD_INCOME, ADD_SAVING, EXPENSE_ACTION_FAILURE, FETCH_EXPENSE, FETCH_INCOME, FETCH_SAVING, INCOME_ACTION_FAILURE, SAVING_ACTION_FAILURE } from "./actionTypes";
 import toast from "react-hot-toast";
 
-const API_URL = "https://finance-management-api.pratmbr.repl.co";
+const API_URL = "https://aa148e6d-e6a9-4d53-8ab0-1b0f42d6cf41-00-3naxoqhy1nfbj.asia-a.replit.dev";
 
 export const fetchIncome = () => async (dispatch) => {
   try {
