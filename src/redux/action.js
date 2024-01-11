@@ -1,7 +1,18 @@
-import { ADD_EXPENSE, ADD_INCOME, ADD_SAVING, EXPENSE_ACTION_FAILURE, FETCH_EXPENSE, FETCH_INCOME, FETCH_SAVING, INCOME_ACTION_FAILURE, SAVING_ACTION_FAILURE } from "./actionTypes";
+import {
+  ADD_EXPENSE,
+  ADD_INCOME,
+  ADD_SAVING,
+  EXPENSE_ACTION_FAILURE,
+  FETCH_EXPENSE,
+  FETCH_INCOME,
+  FETCH_SAVING,
+  INCOME_ACTION_FAILURE,
+  SAVING_ACTION_FAILURE,
+} from "./actionTypes";
 import toast from "react-hot-toast";
 
-const API_URL = "https://aa148e6d-e6a9-4d53-8ab0-1b0f42d6cf41-00-3naxoqhy1nfbj.asia-a.replit.dev";
+const API_URL =
+  "https://aa148e6d-e6a9-4d53-8ab0-1b0f42d6cf41-00-3ba8edqz7tge8.sisko.replit.dev";
 
 export const fetchIncome = () => async (dispatch) => {
   try {
@@ -54,17 +65,17 @@ export const fetchSaving = () => async (dispatch) => {
 export const addIncome = (incomeData) => async (dispatch) => {
   try {
     const response = await fetch(`${API_URL}/income`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(incomeData),
-      });
-      if (response.status === 201) {
-        const data = await response.json();
-        dispatch({ type: ADD_INCOME, payload: data.newIncome });
-        toast.success("Income added successfully");
-      }
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(incomeData),
+    });
+    if (response.status === 201) {
+      const data = await response.json();
+      dispatch({ type: ADD_INCOME, payload: data.newIncome });
+      toast.success("Income added successfully");
+    }
   } catch (error) {
     console.error("Error in adding income", error);
     dispatch({
@@ -77,17 +88,17 @@ export const addIncome = (incomeData) => async (dispatch) => {
 export const addExpense = (expenseData) => async (dispatch) => {
   try {
     const response = await fetch(`${API_URL}/expense`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(expenseData),
-      });
-      if (response.status === 201) {
-        const data = await response.json();
-        dispatch({ type: ADD_EXPENSE, payload: data.newExpense });
-        toast.success("Expense added successfully");
-      }
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(expenseData),
+    });
+    if (response.status === 201) {
+      const data = await response.json();
+      dispatch({ type: ADD_EXPENSE, payload: data.newExpense });
+      toast.success("Expense added successfully");
+    }
   } catch (error) {
     console.error("Error in adding expense", error);
     dispatch({
@@ -100,17 +111,17 @@ export const addExpense = (expenseData) => async (dispatch) => {
 export const addSaving = (savingData) => async (dispatch) => {
   try {
     const response = await fetch(`${API_URL}/saving`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(savingData),
-      });
-      if (response.status === 201) {
-        const data = await response.json();
-        dispatch({ type: ADD_SAVING, payload: data.newSaving });
-        toast.success("Expense added successfully");
-      }
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(savingData),
+    });
+    if (response.status === 201) {
+      const data = await response.json();
+      dispatch({ type: ADD_SAVING, payload: data.newSaving });
+      toast.success("Expense added successfully");
+    }
   } catch (error) {
     console.error("Error in adding saving", error);
     dispatch({
