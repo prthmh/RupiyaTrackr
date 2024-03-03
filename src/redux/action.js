@@ -11,8 +11,7 @@ import {
 } from "./actionTypes";
 import toast from "react-hot-toast";
 
-const API_URL =
-  "https://aa148e6d-e6a9-4d53-8ab0-1b0f42d6cf41-00-3ba8edqz7tge8.sisko.replit.dev";
+const API_URL = import.meta.env.VITE_API_URL;
 
 export const fetchIncome = () => async (dispatch) => {
   try {
