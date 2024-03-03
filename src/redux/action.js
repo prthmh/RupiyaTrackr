@@ -12,6 +12,7 @@ import {
 import toast from "react-hot-toast";
 
 const API_URL = import.meta.env.VITE_API_URL;
+console.log(API_URL)
 
 export const fetchIncome = () => async (dispatch) => {
   try {
